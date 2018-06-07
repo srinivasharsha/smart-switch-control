@@ -22,11 +22,23 @@ Upon successful reboot, your device must now be connected to your local wifi net
 
 *mkdir relay_conrtol*
 
-add the given scripts(in scripts-to-add)
+add the relay_on and relay_off scripts(in scripts-to-add)
 
 *chmod u+x /relay_control/relay_on.sh*
+
+Next create the directory /www/cgi-bin/ (*mkdir /www/cgi-bin/*) and create the relay.cgi script(from scripts-to-add)
+
+Give execute permission (*chmod +x /www/cgi-bin/relay.cgi*).
 
 # Controlling the switch
 Run *relay_on.sh* to turn on the switch
 
 *sh relay_control/relay_on.sh*
+
+# Controlling from browser
+
+Open a browser on the same network and use the following URLs to control the relay:
+
+*http://<your_device_ip>/cgi-bin/relay.cgi?on*
+
+*http://<your_device_ip>/cgi-bin/relay.cgi?off*
