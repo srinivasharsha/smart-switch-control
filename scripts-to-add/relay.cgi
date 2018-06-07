@@ -16,11 +16,11 @@ case "$QUERY_STRING" in
   esac
  ;;
  on) 
-  echo 1 > $RELAY_CTRL
+  sh relay_on.sh
   echo OK
  ;;
  off) 
-  echo 0 > $RELAY_CTRL
+  sh relay_off.sh
   echo OK
  ;;
 esac
